@@ -65,7 +65,7 @@ function Index() {
       <link rel="preload" as="image" href={depoimento3} />
     <div className="min-h-screen bg-soft text-ink">
       <div className="bg-gradient-brand py-3 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground">
-        OFERTA ESPECIAL DE LANÇAMENTO • 70% DE DESCONTO
+        Oferta especial disponível por tempo limitado! 70% de desconto
       </div>
 
       {/* HERO */}
