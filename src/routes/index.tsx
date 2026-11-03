@@ -4,7 +4,7 @@ import {
   Lock, Mail, BookOpen, Tablet, Printer, CalendarDays, CircleCheck, MessageSquare,
   Brain, HeartHandshake, ShieldCheck, ChevronDown, Star, ChevronLeft, ChevronRight, ImagePlus,
 } from "lucide-react";
-const heroKit = "/images/caminhos-da-fe-mockup.webp";
+import heroKit from "@/assets/hero-kit.jpg";
 const licoes = "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85";
 import avatares from "@/assets/avatares.jpg";
 import bonus1 from "@/assets/bonus1.jpg";
@@ -73,7 +73,7 @@ function Index() {
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           Ajude seus filhos a conhecer, compreender e viver a fé católica com uma formação organizada, acolhedora e pensada para a rotina da família.
         </p>
-        <img src={heroKit} alt="Mockup da coleção Caminhos da Fé com a caixa principal, os 15 livros digitais e os três bônus" className="mx-auto mt-8 block h-auto w-full max-w-5xl object-contain" fetchPriority="high" />
+        <img src={heroKit} alt="Mockup da coleção Caminhos da Fé com a caixa principal, os 15 livros digitais e os três bônus" className="mx-auto mt-8 block h-auto w-full max-w-5xl object-contain" decoding="async" fetchPriority="high" />
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           Conheça o <b className="text-ink">Caminhos da Fé</b>: uma jornada de formação católica criada para crianças e adolescentes de <b className="text-brand">5 a 15 anos</b>, com atividades e ensinamentos que ajudam a construir uma fé mais consciente, sólida e fundamentada.
         </p>
