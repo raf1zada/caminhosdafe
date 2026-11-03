@@ -4,13 +4,13 @@ import {
   Lock, Mail, BookOpen, Tablet, Printer, CalendarDays, CircleCheck, MessageSquare,
   Brain, HeartHandshake, ShieldCheck, ChevronDown, Star, ChevronLeft, ChevronRight, ImagePlus,
 } from "lucide-react";
-import heroKit from "@/assets/hero-kit.jpg";
-import licoes from "@/assets/licoes.jpg";
+const heroKit = "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1400&q=85";
+const licoes = "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85";
 import avatares from "@/assets/avatares.jpg";
 import bonus1 from "@/assets/bonus1.jpg";
 import bonus2 from "@/assets/bonus2.jpg";
 import bonus3 from "@/assets/bonus3.jpg";
-import planoCompleto from "@/assets/plano-completo.jpg";
+const planoCompleto = "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1100&q=85";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -58,7 +58,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-soft text-ink">
       <div className="bg-gradient-brand py-3 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground">
-        🚨 Condição especial de lançamento: 70% de desconto
+        OFERTA ESPECIAL DE LANÇAMENTO • 70% DE DESCONTO
       </div>
 
       {/* HERO */}
@@ -71,19 +71,19 @@ function Index() {
           <span className="text-brand">Não espere seu filho se afastar da fé</span> para começar a ensiná-lo a compreender aquilo em que acredita.
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-          A infância passa rápido. E os ensinamentos que seus filhos recebem hoje podem fazer toda a diferença na maneira como viverão a fé amanhã.
+          Ajude seus filhos a conhecer, compreender e viver a fé católica com uma formação organizada, acolhedora e pensada para a rotina da família.
         </p>
         <img src={heroKit} alt="Coleção Caminhos da Fé" className="mx-auto mt-8 w-full max-w-2xl" />
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           Conheça o <b className="text-ink">Caminhos da Fé</b>: uma jornada de formação católica criada para crianças e adolescentes de <b className="text-brand">5 a 15 anos</b>, com atividades e ensinamentos que ajudam a construir uma fé mais consciente, sólida e fundamentada.
         </p>
-        <p className="mt-5 text-xl font-extrabold text-brand">48 semanas de aprendizado para fortalecer aquilo que realmente importa.</p>
+        <p className="mt-5 text-xl font-extrabold text-brand">15 livros digitais • 48 semanas de formação • Acesso digital e material imprimível.</p>
         <Cta className="mt-8 max-w-xl">Quero garantir meu acesso com 70% de desconto agora <span>→</span></Cta>
         <p className="mt-5 flex items-center justify-center gap-2 text-sm text-muted-foreground">
           <Mail className="h-4 w-4" /> Acesso imediato após a confirmação da compra.
         </p>
         <p className="mx-auto mt-7 max-w-2xl text-sm font-semibold text-ink">
-          Uma oportunidade especial para famílias que desejam transmitir a fé católica às próximas gerações.
+          +1000 famílias transformadas
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3">
           <img src={avatares} alt="Famílias" className="h-10 rounded-full" />
@@ -96,7 +96,7 @@ function Index() {
         <Eyebrow>Famílias que cultivam a fé</Eyebrow>
         <h2 className="mt-3 text-4xl font-extrabold">Veja o que as famílias estão compartilhando</h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Depoimentos e experiências de famílias que estão caminhando com o Caminhos da Fé.
+          Em breve: experiências reais de famílias que utilizam o Caminhos da Fé.
         </p>
         <div className="mx-auto mt-10 max-w-3xl">
           <div className="overflow-hidden rounded-2xl bg-card p-3 shadow-card">
@@ -138,7 +138,7 @@ function Index() {
         <div>
           <Eyebrow>Uma formação que faz a diferença</Eyebrow>
           <h2 className="mt-4 text-3xl font-bold leading-tight md:text-[34px]">
-            Cada encontro ajuda seus filhos a <span className="text-brand">compreender melhor a fé católica</span>, refletir sobre seus ensinamentos e desenvolver convicções que podem acompanhá-los por toda a vida.
+            Cada encontro ajuda seu filho a descobrir por que acredita naquilo que a Igreja ensina. Um material que vai além da memorização e incentiva conhecimento, reflexão e diálogo em família.
           </h2>
         </div>
         <img src={licoes} alt="Páginas dos encontros Caminhos da Fé" className="w-full rounded-2xl" />
@@ -148,7 +148,7 @@ function Index() {
       <section className="mx-auto max-w-5xl px-5 text-center">
         <Eyebrow>Uma formação completa</Eyebrow>
         <h2 className="mt-4 text-4xl font-extrabold md:text-5xl">
-          Você receberá um material que vai <span className="text-brand">muito além dos encontros tradicionais de catequese</span>.
+          Uma formação católica completa para acompanhar seu filho durante 48 semanas.
         </h2>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
           {[
@@ -200,7 +200,7 @@ function Index() {
       <section className="mx-auto max-w-6xl px-5 py-28 text-center">
         <Eyebrow>Nossa metodologia</Eyebrow>
         <h2 className="mt-3 text-4xl font-extrabold">Como fortalecer a formação católica dos seus filhos no dia a dia</h2>
-        <p className="mt-3 text-muted-foreground">Uma metodologia prática, organizada e fácil de aplicar em família.</p>
+        <p className="mt-3 text-muted-foreground">Conhecimento, reflexão, compreensão e vivência: quatro etapas para criar raízes profundas na fé católica.</p>
         <div className="mt-10 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-4">
           {[
             [BookOpen, "Conhecimento da fé", "Seus filhos conhecem os fundamentos da fé católica por meio de explicações acessíveis e conteúdos organizados."],
@@ -349,9 +349,9 @@ function Index() {
       {/* FINAL */}
       <section className="bg-gradient-brand px-5 py-16 text-center text-primary-foreground">
         <Eyebrow className="text-primary-foreground">Não deixe essa oportunidade passar</Eyebrow>
-        <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-extrabold">A fé precisa ser ensinada, compreendida e vivida.</h2>
+        <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-extrabold">A fé que seu filho aprende hoje pode fazer parte de toda a sua vida.</h2>
         <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed">
-          Não basta que seus filhos conheçam algumas orações ou frequentem encontros religiosos.
+          Não espere que as dúvidas apareçam para começar a conversar sobre a fé católica. Ofereça uma formação que estimule seu filho a compreender aquilo em que acredita.
         </p>
         <p className="mx-auto mt-3 max-w-3xl leading-relaxed">
           Ajude-os a compreender aquilo em que acreditam, conhecer os ensinamentos da Igreja e construir uma formação católica que possa acompanhá-los durante toda a vida.
