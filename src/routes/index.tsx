@@ -4,7 +4,7 @@ import {
   Lock, Mail, BookOpen, Tablet, Printer, CalendarDays, CircleCheck, MessageSquare,
   Brain, HeartHandshake, ShieldCheck, ChevronDown, Star, ChevronLeft, ChevronRight, ImagePlus,
 } from "lucide-react";
-import heroKit from "@/assets/hero-kit.jpg";
+import heroKit from "@/Coleção Caminhos da Fé em Família.png";
 const licoes = "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85";
 import avatares from "@/assets/avatares.jpg";
 import bonus1 from "@/assets/bonus1.jpg";
