@@ -51,6 +51,14 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-brand: var(--brand);
+  --color-cta: var(--cta);
+  --color-orange: var(--orange);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-footer: var(--footer);
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-sans: "Inter", sans-serif;
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -63,7 +71,16 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --brand: oklch(0.6 0.2 264);
+  --cta: oklch(0.72 0.19 150);
+  --orange: oklch(0.7 0.19 46);
+  --ink: oklch(0.2 0.03 265);
+  --soft: oklch(0.975 0.006 265);
+  --footer: oklch(0.21 0.03 265);
+  --gradient-brand: linear-gradient(135deg, oklch(0.58 0.21 264), oklch(0.67 0.16 262));
+  --shadow-card: 0 4px 20px -6px oklch(0.5 0.05 265 / 0.12);
+  --shadow-cta: 0 12px 30px -8px oklch(0.6 0.2 264 / 0.35);
+  --background: oklch(0.975 0.006 265);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
@@ -140,5 +157,12 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.04em; }
+}
+@utility bg-gradient-brand { background-image: var(--gradient-brand); }
+@utility shadow-card { box-shadow: var(--shadow-card); }
+@utility shadow-cta { box-shadow: var(--shadow-cta); }
+@layer base {
 }
