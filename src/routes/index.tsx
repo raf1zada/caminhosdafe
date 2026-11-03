@@ -2,9 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Lock, Mail, BookOpen, Tablet, Printer, CalendarDays, CircleCheck, MessageSquare,
-  Brain, HeartHandshake, ShieldCheck, ChevronDown, Star, ChevronLeft, ChevronRight, ImagePlus,
+  Brain, HeartHandshake, ShieldCheck, ChevronDown, Star, ChevronLeft, ChevronRight,
 } from "lucide-react";
 import heroKit from "@/Coleção Caminhos da Fé em Família.png";
+import depoimento1 from "@/depoimento1.png";
+import depoimento2 from "@/depoimento2.png";
+import depoimento3 from "@/depoimento3.png";
 const licoes = "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85";
 import avatares from "@/assets/avatares.jpg";
 import bonus1 from "@/assets/bonus1.jpg";
@@ -94,19 +97,16 @@ function Index() {
         <Eyebrow>Famílias que cultivam a fé</Eyebrow>
         <h2 className="mt-3 text-4xl font-extrabold">Veja o que as famílias estão compartilhando</h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Em breve: experiências reais de famílias que utilizam o Caminhos da Fé.
+          Veja alguns relatos de famílias que estão vivendo o Caminhos da Fé no dia a dia.
         </p>
         <div className="mx-auto mt-10 max-w-3xl">
           <div className="overflow-hidden rounded-2xl bg-card p-3 shadow-card">
-            <div className="flex min-h-[280px] items-center justify-center rounded-xl border-2 border-dashed border-brand/30 bg-soft p-8">
-              <div className="max-w-sm">
-                <ImagePlus className="mx-auto h-12 w-12 text-brand" />
-                <p className="mt-4 font-bold">Espaço para imagem de depoimento {testimonialIndex + 1}</p>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Adicione aqui o print ou a foto do depoimento desta família.
-                </p>
-              </div>
-            </div>
+            <img
+              src={[depoimento1, depoimento2, depoimento3][testimonialIndex]}
+              alt={`Depoimento ${testimonialIndex + 1} de uma família sobre o Caminhos da Fé`}
+              className="mx-auto block h-auto max-h-[780px] w-full rounded-xl object-contain"
+              loading="lazy"
+            />
           </div>
           <div className="mt-5 flex items-center justify-center gap-5">
             <button type="button" aria-label="Depoimento anterior"
@@ -127,7 +127,7 @@ function Index() {
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
-          <p className="mt-3 text-xs text-muted-foreground">Carrossel preparado para receber 3 imagens de depoimentos.</p>
+          <p className="mt-3 text-xs text-muted-foreground">Depoimento {testimonialIndex + 1} de 3</p>
         </div>
       </section>
 
