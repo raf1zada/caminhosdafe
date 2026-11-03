@@ -5,6 +5,7 @@ import {
   Brain, HeartHandshake, ShieldCheck, ChevronDown, Star, ChevronLeft, ChevronRight,
 } from "lucide-react";
 import heroKit from "@/Coleção Caminhos da Fé em Família.png";
+import kitBasico from "@/Kit Caminhos da Fé em Família.png";
 import depoimento1 from "@/depoimento1.png";
 import depoimento2 from "@/depoimento2.png";
 import depoimento3 from "@/depoimento3.png";
@@ -271,7 +272,7 @@ function Index() {
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-cta text-primary-foreground">✓</span>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-cta">Presente especial</p>
-                    <p className="text-sm font-extrabold text-cta">GRÁTIS no Plano Família</p>
+                    <p className="text-sm font-extrabold text-cta">GRÁTIS no Plano Premium</p>
                   </div>
                 </div>
               </div>
@@ -286,9 +287,9 @@ function Index() {
         <h2 className="mt-2 text-4xl font-extrabold">Escolha o melhor plano para sua família!</h2>
         <div className="mt-10 grid items-stretch gap-6 text-left md:grid-cols-2">
           <Plan
-            name="Plano Essencial"
+            name="Plano Básico"
             sub='Coleção completa "Caminhos da Fé"'
-            img={heroKit}
+            img={kitBasico}
             items={[
               ["Coleção 'Caminhos da Fé' – 48 semanas", true],
               ["15 livros digitais de formação católica", true],
@@ -300,11 +301,11 @@ function Index() {
             preco="R$29,99"
             parc="Ou em até 12x no cartão."
             eco="R$69,98 — 70% de desconto!"
-            cta="Quero o Plano Essencial"
+            cta="Quero o Plano Básico"
           />
           <Plan
             featured
-            name="Plano Família"
+            name="Plano Premium"
             sub="Coleção completa + 3 bônus exclusivos"
             img={planoCompleto}
             items={[
@@ -317,7 +318,7 @@ function Index() {
             preco="R$49,90"
             parc="Ou em até 12x no cartão."
             eco="R$116,43 — 70% de desconto!"
-            cta="Quero o Plano Família"
+            cta="Quero o Plano Premium"
           />
         </div>
       </section>
