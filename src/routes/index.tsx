@@ -2,10 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Lock, Mail, BookOpen, Tablet, Printer, CalendarDays, CircleCheck, MessageSquare,
-  Brain, HeartHandshake, ShieldCheck, ChevronDown, Star,
+  Brain, HeartHandshake, ShieldCheck, ChevronDown, Star, ChevronLeft, ChevronRight, ImagePlus,
 } from "lucide-react";
 import heroKit from "@/assets/hero-kit.jpg";
 import licoes from "@/assets/licoes.jpg";
+import avatares from "@/assets/avatares.jpg";
 import bonus1 from "@/assets/bonus1.jpg";
 import bonus2 from "@/assets/bonus2.jpg";
 import bonus3 from "@/assets/bonus3.jpg";
@@ -53,6 +54,7 @@ const faqs = [
 
 function Index() {
   const [open, setOpen] = useState<number | null>(null);
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
   return (
     <div className="min-h-screen bg-soft text-ink">
       <div className="bg-gradient-brand py-3 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground">
@@ -63,10 +65,10 @@ function Index() {
       <section className="mx-auto max-w-5xl px-5 pt-14 text-center">
         <div className="flex items-center justify-center gap-2">
           <Lock className="h-5 w-5 text-orange" />
-          <Eyebrow className="tracking-[0.2em]">Compra 100% segura</Eyebrow>
+          <Eyebrow className="tracking-[0.12em]">AMBIENTE DE COMPRA 100% SEGURO</Eyebrow>
         </div>
         <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-extrabold leading-[1.08] md:text-[64px]">
-          Não espere seu filho se afastar da fé para começar a ensiná-lo a compreender aquilo em que acredita.
+          Não espere seu filho se afastar da fé para começar a ensiná-lo a <span className="text-brand">compreender aquilo em que acredita.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           A infância passa rápido. E os ensinamentos que seus filhos recebem hoje podem fazer toda a diferença na maneira como viverão a fé amanhã.
@@ -76,13 +78,59 @@ function Index() {
           Conheça o <b className="text-ink">Caminhos da Fé</b>: uma jornada de formação católica criada para crianças e adolescentes de <b className="text-brand">5 a 15 anos</b>, com atividades e ensinamentos que ajudam a construir uma fé mais consciente, sólida e fundamentada.
         </p>
         <p className="mt-5 text-xl font-extrabold text-brand">48 semanas de aprendizado para fortalecer aquilo que realmente importa.</p>
-        <Cta className="mt-8 max-w-lg">Quero aproveitar os 70% de desconto <span>→</span></Cta>
+        <Cta className="mt-8 max-w-xl">Quero garantir meu acesso com 70% de desconto agora <span>→</span></Cta>
         <p className="mt-5 flex items-center justify-center gap-2 text-sm text-muted-foreground">
           <Mail className="h-4 w-4" /> Acesso imediato após a confirmação da compra.
         </p>
         <p className="mx-auto mt-7 max-w-2xl text-sm font-semibold text-ink">
           Uma oportunidade especial para famílias que desejam transmitir a fé católica às próximas gerações.
         </p>
+        <div className="mt-8 flex flex-col items-center justify-center gap-3">
+          <img src={avatares} alt="Famílias" className="h-10 rounded-full" />
+          <p className="text-sm font-extrabold text-ink">1000+ famílias transformadas</p>
+        </div>
+      </section>
+
+      {/* DEPOIMENTOS — CARROSSEL DE IMAGENS */}
+      <section className="mx-auto max-w-5xl px-5 py-20 text-center">
+        <Eyebrow>Famílias que cultivam a fé</Eyebrow>
+        <h2 className="mt-3 text-4xl font-extrabold">Veja o que as famílias estão compartilhando</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+          Depoimentos e experiências de famílias que estão caminhando com o Caminhos da Fé.
+        </p>
+        <div className="mx-auto mt-10 max-w-3xl">
+          <div className="overflow-hidden rounded-2xl bg-card p-3 shadow-card">
+            <div className="flex min-h-[280px] items-center justify-center rounded-xl border-2 border-dashed border-brand/30 bg-soft p-8">
+              <div className="max-w-sm">
+                <ImagePlus className="mx-auto h-12 w-12 text-brand" />
+                <p className="mt-4 font-bold">Espaço para imagem de depoimento {testimonialIndex + 1}</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Adicione aqui o print ou a foto do depoimento desta família.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-5 flex items-center justify-center gap-5">
+            <button type="button" aria-label="Depoimento anterior"
+              onClick={() => setTestimonialIndex((current) => (current + 2) % 3)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-brand/20 bg-card transition hover:bg-brand/10">
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <div className="flex items-center gap-2" aria-label={"Depoimento " + (testimonialIndex + 1) + " de 3"}>
+              {[0, 1, 2].map((index) => (
+                <button key={index} type="button" aria-label={"Ir para depoimento " + (index + 1)}
+                  onClick={() => setTestimonialIndex(index)}
+                  className={"h-2.5 rounded-full transition-all " + (testimonialIndex === index ? "w-7 bg-brand" : "w-2.5 bg-brand/25")} />
+              ))}
+            </div>
+            <button type="button" aria-label="Próximo depoimento"
+              onClick={() => setTestimonialIndex((current) => (current + 1) % 3)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-brand/20 bg-card transition hover:bg-brand/10">
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
+          <p className="mt-3 text-xs text-muted-foreground">Carrossel preparado para receber 3 imagens de depoimentos.</p>
+        </div>
       </section>
 
       {/* FORMAÇÃO */}
