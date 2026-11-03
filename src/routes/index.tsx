@@ -10,9 +10,9 @@ import depoimento2 from "@/depoimento2.png";
 import depoimento3 from "@/depoimento3.png";
 import licoes from "@/Caminhos da Fé_ Fé em Família.png";
 import avatares from "@/Fila de Avatares para Depoimentos.png";
-import bonus1 from "@/assets/bonus1.jpg";
-import bonus2 from "@/assets/bonus2.jpg";
-import bonus3 from "@/assets/bonus3.jpg";
+import bonus1 from "@/Guia para Responder às Dúvidas da Fé.png";
+import bonus2 from "@/Hábitos Familiares que Fortalecem a Fé.png";
+import bonus3 from "@/Fé Católica na Adolescência.png";
 const planoCompleto = "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1100&q=85";
 
 export const Route = createFileRoute("/")({
@@ -255,14 +255,26 @@ function Index() {
             [bonus2, "Hábitos Familiares que Fortalecem a Fé", "Descubra maneiras práticas de inserir a oração, a leitura bíblica, a participação na Missa e os valores cristãos na rotina familiar."],
             [bonus3, "Fé Católica na Adolescência: dos 12 aos 18 Anos", "Um guia para acompanhar os filhos em uma fase de grandes transformações, ajudando-os a aprofundar seus conhecimentos religiosos e desenvolver uma fé consciente diante das novas influências e questionamentos."],
           ].map(([img, title, description], i) => (
-            <div key={title} className="rounded-2xl bg-card p-8 shadow-card">
-              <img src={img} alt={title} className="w-full rounded-xl" />
+            <div key={title} className="group flex h-full flex-col rounded-2xl border border-brand/10 bg-card p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <div className="flex h-64 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-orange/5 via-white to-brand/5 p-3">
+                <img src={img} alt={title} className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.04]" loading="lazy" />
+              </div>
               <Eyebrow className="mt-6 tracking-[0.15em]">Bônus #{i + 1}</Eyebrow>
               <h3 className="mt-3 text-xl font-bold leading-tight">{title}</h3>
-              <p className="mt-3 leading-relaxed text-muted-foreground">{description}</p>
-              <span className="mt-5 inline-flex flex-wrap gap-3 rounded-full bg-cta/10 px-3 py-1.5 text-sm font-bold text-cta">
-                <span>Valor R$47</span><span>GRÁTIS NO PLANO FAMÍLIA</span>
-              </span>
+              <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">{description}</p>
+              <div className="mt-6 rounded-xl border border-orange/20 bg-gradient-to-br from-orange/10 to-amber-50 p-4">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Valor individual</span>
+                  <span className="text-lg font-extrabold text-muted-foreground line-through decoration-orange decoration-2">R$ 47,00</span>
+                </div>
+                <div className="mt-3 flex items-center gap-2">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-cta text-primary-foreground">✓</span>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wider text-cta">Presente especial</p>
+                    <p className="text-sm font-extrabold text-cta">GRÁTIS no Plano Família</p>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
