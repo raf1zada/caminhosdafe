@@ -68,7 +68,7 @@ function Index() {
           <Eyebrow className="tracking-[0.12em]">AMBIENTE DE COMPRA 100% SEGURO</Eyebrow>
         </div>
         <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-extrabold leading-[1.08] md:text-[64px]">
-          Não espere seu filho se afastar da fé para começar a ensiná-lo a <span className="text-brand">compreender aquilo em que acredita.</span>
+          <span className="text-brand">Não espere seu filho se afastar da fé</span> para começar a ensiná-lo a compreender aquilo em que acredita.
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           A infância passa rápido. E os ensinamentos que seus filhos recebem hoje podem fazer toda a diferença na maneira como viverão a fé amanhã.
