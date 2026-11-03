@@ -82,9 +82,7 @@ function Index() {
         <p className="mt-5 flex items-center justify-center gap-2 text-sm text-muted-foreground">
           <Mail className="h-4 w-4" /> Acesso imediato após a confirmação da compra.
         </p>
-        <p className="mx-auto mt-7 max-w-2xl text-sm font-semibold text-ink">
-          +1000 famílias transformadas
-        </p>
+        
         <div className="mt-8 flex flex-col items-center justify-center gap-3">
           <img src={avatares} alt="Famílias" className="h-10 rounded-full" />
           <p className="text-sm font-extrabold text-ink">1000+ famílias transformadas</p>
