@@ -59,6 +59,10 @@ function Index() {
   const [open, setOpen] = useState<number | null>(null);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   return (
+    <>
+      <link rel="preload" as="image" href={depoimento1} />
+      <link rel="preload" as="image" href={depoimento2} />
+      <link rel="preload" as="image" href={depoimento3} />
     <div className="min-h-screen bg-soft text-ink">
       <div className="bg-gradient-brand py-3 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground">
         OFERTA ESPECIAL DE LANÇAMENTO • 70% DE DESCONTO
@@ -105,7 +109,8 @@ function Index() {
               src={[depoimento1, depoimento2, depoimento3][testimonialIndex]}
               alt={`Depoimento ${testimonialIndex + 1} de uma família sobre o Caminhos da Fé`}
               className="mx-auto block h-auto max-h-[780px] w-full rounded-xl object-contain"
-              loading="lazy"
+              loading="eager"
+              decoding="sync"
             />
           </div>
           <div className="mt-5 flex items-center justify-center gap-5">
@@ -390,5 +395,6 @@ function Plan({ name, sub, img, items, de, preco, parc, eco, cta, featured }: {
       </div>
       <Cta className="mt-8 w-full">{cta} →</Cta>
     </div>
+    </>
   );
 }
