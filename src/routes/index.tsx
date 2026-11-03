@@ -14,7 +14,7 @@ import avatares from "@/Fila de Avatares para Depoimentos.png";
 import bonus1 from "@/Guia para Responder às Dúvidas da Fé.png";
 import bonus2 from "@/Hábitos Familiares que Fortalecem a Fé.png";
 import bonus3 from "@/Fé Católica na Adolescência.png";
-const planoCompleto = "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1100&q=85";
+import planoPremium from "@/Gemini_Generated_Image_86dmku86dmku86dm.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -292,10 +292,9 @@ function Index() {
             img={kitBasico}
             items={[
               ["Coleção 'Caminhos da Fé' – 48 semanas", true],
-              ["15 livros digitais de formação católica", true],
-              ["Conteúdos organizados para crianças e adolescentes de 5 a 15 anos", true],
-              ["Atividades de reflexão e aprendizado", true],
-              ["3 bônus exclusivos", false],
+              ["Guia para Responder às Dúvidas da Fé", false],
+              ["Hábitos Familiares que Fortalecem a Fé", false],
+              ["Fé Católica na Adolescência: dos 12 aos 18 Anos", false],
             ]}
             de="R$99,97"
             preco="R$29,99"
@@ -307,12 +306,15 @@ function Index() {
             featured
             name="Plano Premium"
             sub="Coleção completa + 3 bônus exclusivos"
-            img={planoCompleto}
+            img={planoPremium}
             items={[
               ["Coleção 'Caminhos da Fé' – 48 semanas", true],
-              ["Bônus #1 Guia para Responder às Dúvidas sobre a Fé", true],
-              ["Bônus #2 Hábitos Familiares que Fortalecem a Fé", true],
-              ["Bônus #3 Fé Católica na Adolescência: dos 12 aos 18 Anos", true],
+              ["15 livros digitais de formação católica", true],
+              ["Conteúdos organizados para crianças e adolescentes de 5 a 15 anos", true],
+              ["Atividades de reflexão e aprendizado", true],
+              ["Guia para Responder às Dúvidas da Fé", true],
+              ["Hábitos Familiares que Fortalecem a Fé", true],
+              ["Fé Católica na Adolescência: dos 12 aos 18 Anos", true],
             ]}
             de="R$166,33"
             preco="R$49,90"
@@ -382,6 +384,7 @@ function Index() {
         <p className="mx-auto mt-4 max-w-2xl text-xs leading-relaxed">O conteúdo apresentado possui caráter educativo e religioso. Cada família possui uma realidade própria e os resultados podem variar.</p>
       </footer>
     </div>
+    </>
   );
 }
 
@@ -389,12 +392,12 @@ function Plan({ name, sub, img, items, de, preco, parc, eco, cta, featured }: {
   name: string; sub: string; img: string; items: [string, boolean][]; de: string; preco: string; parc: string; eco: string; cta: string; featured?: boolean;
 }) {
   return (
-    <div className={`relative flex flex-col rounded-3xl bg-card p-8 shadow-card ${featured ? "border-2 border-brand" : ""}`}>
+    <div className={`relative flex h-full flex-col rounded-3xl bg-card p-8 shadow-card ${featured ? "border-2 border-brand" : ""}`}>
       {featured && <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-orange px-4 py-1 text-xs font-bold uppercase text-primary-foreground">★ Mais vendido</span>}
       {featured && <p className="mb-2 flex items-center gap-2 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground"><Star className="h-4 w-4 fill-orange text-orange" /> Coleção completa + 3 bônus exclusivos</p>}
       <h3 className="text-2xl font-bold">{name}</h3>
       <p className="mt-1 text-muted-foreground">{sub}</p>
-      <img src={img} alt={name} className="my-8 w-full" />
+      <img src={img} alt={name} className="my-8 h-56 w-full object-contain" />
       <ul className="space-y-3">
         {items.map(([item, included]) => (
           <li key={item} className={`flex gap-3 ${included ? "" : "text-muted-foreground/50 line-through"}`}><Check muted={!included} />{item}</li>
@@ -408,6 +411,5 @@ function Plan({ name, sub, img, items, de, preco, parc, eco, cta, featured }: {
       </div>
       <Cta className="mt-8 w-full">{cta} →</Cta>
     </div>
-    </>
   );
 }
