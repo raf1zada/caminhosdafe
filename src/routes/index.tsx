@@ -91,7 +91,7 @@ function Index() {
         </p>
         
         <div className="mt-8 flex flex-col items-center justify-center gap-3">
-          <img src={avatares} alt="Famílias" className="h-10 rounded-full" />
+          <img src={avatares} alt="Famílias" className="h-10 w-[140px] rounded-full object-cover object-top" />
           <p className="text-sm font-extrabold text-ink">1000+ famílias transformadas</p>
         </div>
       </section>
