@@ -9,7 +9,7 @@ import depoimento1 from "@/depoimento1.png";
 import depoimento2 from "@/depoimento2.png";
 import depoimento3 from "@/depoimento3.png";
 const licoes = "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1100&q=85";
-import avatares from "@/assets/avatares.jpg";
+import avatares from "@/Fila de Avatares para Depoimentos.png";
 import bonus1 from "@/assets/bonus1.jpg";
 import bonus2 from "@/assets/bonus2.jpg";
 import bonus3 from "@/assets/bonus3.jpg";
