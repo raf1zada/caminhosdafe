@@ -337,9 +337,9 @@ function Index() {
       {/* GARANTIA */}
       <section className="mx-auto max-w-3xl px-5 py-24">
         <div className="flex flex-col items-center gap-6 rounded-3xl bg-card p-10 text-center shadow-card sm:flex-row sm:text-left">
-          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-cta/10"><ShieldCheck className="h-9 w-9 text-cta" /></div>
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-green-600/10"><ShieldCheck className="h-9 w-9 text-green-600" /></div>
           <div>
-            <h3 className="text-3xl font-bold">Garantia incondicional de 30 dias</h3>
+            <h3 className="text-3xl font-bold text-green-600">Garantia incondicional de 30 dias</h3>
             <p className="mt-2 text-lg leading-relaxed text-muted-foreground">Você tem 30 dias para conhecer e experimentar a metodologia. Se por algum motivo perceber que o material não atende às expectativas da sua família, poderá solicitar o reembolso integral dentro do prazo de garantia.</p>
           </div>
         </div>
