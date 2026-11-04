@@ -115,34 +115,34 @@ function Index() {
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
           Veja alguns relatos de famílias que estão vivendo o Caminhos da Fé no dia a dia.
         </p>
-        <div className="mx-auto mt-10 max-w-3xl">
-          <div className="overflow-hidden rounded-2xl bg-card p-3 shadow-card">
-            <img
-              src={[depoimento1, depoimento2, depoimento3][testimonialIndex]}
-              alt={`Depoimento ${testimonialIndex + 1} de uma família sobre o Caminhos da Fé`}
-              className="mx-auto block h-auto max-h-[780px] w-full rounded-xl object-contain"
-              loading="eager"
-              decoding="sync"
-            />
-          </div>
-          <div className="mt-5 flex items-center justify-center gap-5">
+        <div className="mx-auto mt-10 max-w-4xl">
+          <div className="flex items-center gap-2 sm:gap-4">
             <button type="button" aria-label="Depoimento anterior"
               onClick={() => setTestimonialIndex((current) => (current + 2) % 3)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-brand/20 bg-card transition hover:bg-brand/10">
-              <ChevronLeft className="h-5 w-5" />
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand/20 bg-card text-brand shadow-sm transition hover:bg-brand/10 sm:h-12 sm:w-12">
+              <ChevronLeft className="h-6 w-6" />
             </button>
-            <div className="flex items-center gap-2" aria-label={"Depoimento " + (testimonialIndex + 1) + " de 3"}>
-              {[0, 1, 2].map((index) => (
-                <button key={index} type="button" aria-label={"Ir para depoimento " + (index + 1)}
-                  onClick={() => setTestimonialIndex(index)}
-                  className={"h-2.5 rounded-full transition-all " + (testimonialIndex === index ? "w-7 bg-brand" : "w-2.5 bg-brand/25")} />
-              ))}
+            <div className="min-w-0 flex-1 overflow-hidden rounded-2xl bg-card p-2 shadow-card sm:p-3">
+              <img
+                src={[depoimento1, depoimento2, depoimento3][testimonialIndex]}
+                alt={`Depoimento ${testimonialIndex + 1} de uma família sobre o Caminhos da Fé`}
+                className="mx-auto block h-auto max-h-[780px] w-full rounded-xl object-contain"
+                loading="eager"
+                decoding="sync"
+              />
             </div>
             <button type="button" aria-label="Próximo depoimento"
               onClick={() => setTestimonialIndex((current) => (current + 1) % 3)}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-brand/20 bg-card transition hover:bg-brand/10">
-              <ChevronRight className="h-5 w-5" />
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-brand/20 bg-card text-brand shadow-sm transition hover:bg-brand/10 sm:h-12 sm:w-12">
+              <ChevronRight className="h-6 w-6" />
             </button>
+          </div>
+          <div className="mt-5 flex items-center justify-center gap-2" aria-label={"Depoimento " + (testimonialIndex + 1) + " de 3"}>
+            {[0, 1, 2].map((index) => (
+              <button key={index} type="button" aria-label={"Ir para depoimento " + (index + 1)}
+                onClick={() => setTestimonialIndex(index)}
+                className={"h-2.5 rounded-full transition-all " + (testimonialIndex === index ? "w-7 bg-brand" : "w-2.5 bg-brand/25")} />
+            ))}
           </div>
           <p className="mt-3 text-xs text-muted-foreground">Depoimento {testimonialIndex + 1} de 3</p>
         </div>
