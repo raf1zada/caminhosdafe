@@ -272,7 +272,7 @@ function Index() {
               <div className="mt-6 rounded-xl border border-orange/20 bg-gradient-to-br from-orange/10 to-amber-50 p-4">
                 <div className="flex items-center justify-between gap-2">
                   <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Valor individual</span>
-                  <span className="text-lg font-extrabold text-muted-foreground line-through decoration-orange decoration-2">R$ 47,00</span>
+                  <span className="text-lg font-extrabold text-muted-foreground line-through decoration-orange decoration-2">{i < 3 ? "R$ 47,00" : "R$ 10,00"}</span>
                 </div>
                 <div className="mt-3 flex items-center gap-2">
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-cta text-primary-foreground">✓</span>
