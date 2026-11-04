@@ -69,7 +69,7 @@ function Index() {
       <link rel="preload" as="image" href={depoimento3} />
     <div className="min-h-screen bg-soft text-ink">
       <div className="bg-gradient-brand py-3 text-center text-sm font-bold uppercase tracking-wide text-primary-foreground">
-        Oferta especial disponível por tempo limitado! 70% de desconto
+        Oferta especial disponível por tempo limitado! mais de 70% de desconto
       </div>
 
       {/* HERO */}
@@ -178,7 +178,7 @@ function Index() {
         <div className="rounded-3xl bg-gradient-brand px-8 py-14 text-center text-primary-foreground shadow-cta">
           <Eyebrow className="text-primary-foreground">Aproveite o preço promocional</Eyebrow>
           <h2 className="mb-4 mt-3 text-3xl font-extrabold">Uma condição especial para sua família!</h2>
-          <p className="font-display text-5xl font-extrabold text-orange md:text-6xl">70% DE DESCONTO</p>
+          <p className="font-display text-5xl font-extrabold text-orange md:text-6xl">ATÉ 90% DE DESCONTO</p>
           <p className="mx-auto mt-8 max-w-xl leading-relaxed">
             Aqui, seus filhos não apenas aprendem conceitos religiosos: desenvolvem conhecimento para compreender os ensinamentos da Igreja, refletir sobre a própria fé e responder com segurança quando surgirem questionamentos.
           </p>
@@ -306,9 +306,9 @@ function Index() {
               ["Desafio dos 7 Dias de Fé em Família", false],
             ]}
             de="R$99,97"
-            preco="R$29,99"
+            preco="R$10,00"
             parc="Ou em até 12x no cartão."
-            eco="R$69,98 — 70% de desconto!"
+            eco="R$ 89,97 de economia — 90% OFF!"
             cta="Quero o Plano Básico"
           />
           <Plan
@@ -326,9 +326,9 @@ function Index() {
               ["Desafio dos 7 Dias de Fé em Família: Sete pequenas atividades diárias para fortalecer a fé e aproximar a família de Deus.", true],
             ]}
             de="R$166,33"
-            preco="R$49,90"
+            preco="R$22,90"
             parc="Ou em até 12x no cartão."
-            eco="R$116,43 — 70% de desconto!"
+            eco="R$ 143,43 de economia — 86% OFF!"
             cta="Quero o Plano Premium"
           />
         </div>
