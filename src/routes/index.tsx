@@ -17,7 +17,7 @@ import bonus3 from "@/Fé Católica na Adolescência.png";
 import bonus4 from "@/Caça-Palavras da Fé Católica.png";
 import bonus5 from "@/Planner Semanal de Fé em Família.png";
 import bonus6 from "@/Desafio dos 7 Dias de Fé em Família.png";
-import planoPremium from "@/Gemini_Generated_Image_86dmku86dmku86dm.jpg";
+import planoPremium from "@/bonus.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -440,7 +440,7 @@ function Plan({ name, sub, img, items, de, preco, parc, eco, cta, featured }: {
       {featured && <p className="mb-2 flex items-center gap-2 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground"><Star className="h-4 w-4 fill-orange text-orange" /> Coleção completa + 6 bônus exclusivos</p>}
       <h3 className="text-2xl font-bold">{name}</h3>
       <p className="mt-1 text-muted-foreground">{sub}</p>
-      <img src={img} alt={name} className="my-8 h-56 w-full object-contain" />
+      <div className={`my-8 flex w-full items-center justify-center overflow-hidden rounded-2xl ${featured ? "min-h-[300px] bg-soft p-4 md:min-h-[340px]" : "h-56"}`}><img src={img} alt={name} className={`max-h-full w-full object-contain ${featured ? "max-h-[320px] drop-shadow-md" : "h-56"}`} /></div>
       <ul className="space-y-3">
         {items.map(([item, included]) => (
           <li key={item} className={`flex gap-3 ${included ? "" : "text-muted-foreground/50 line-through"}`}><Check muted={!included} />{item}</li>
