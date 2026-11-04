@@ -14,6 +14,9 @@ import avatares from "@/Fila de Avatares para Depoimentos.png";
 import bonus1 from "@/Guia para Responder às Dúvidas da Fé.png";
 import bonus2 from "@/Hábitos Familiares que Fortalecem a Fé.png";
 import bonus3 from "@/Fé Católica na Adolescência.png";
+import bonus4 from "@/Caça-Palavras da Fé Católica.png";
+import bonus5 from "@/Planner Semanal de Fé em Família.png";
+import bonus6 from "@/Desafio dos 7 Dias de Fé em Família.png";
 import planoPremium from "@/Gemini_Generated_Image_86dmku86dmku86dm.jpg";
 
 export const Route = createFileRoute("/")({
@@ -81,7 +84,7 @@ function Index() {
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           Ajude seus filhos a conhecer, compreender e viver a fé católica com uma formação organizada, acolhedora e pensada para a rotina da família.
         </p>
-        <img src={heroKit} alt="Mockup da coleção Caminhos da Fé com a caixa principal, os 15 livros digitais e os três bônus" className="mx-auto mt-8 block h-auto w-full max-w-5xl object-contain" decoding="async" fetchPriority="high" />
+        <img src={heroKit} alt="Mockup da coleção Caminhos da Fé com a caixa principal, os 15 livros digitais e os seis bônus" className="mx-auto mt-8 block h-auto w-full max-w-5xl object-contain" decoding="async" fetchPriority="high" />
         <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
           Conheça o <b className="text-ink">Caminhos da Fé</b>: uma jornada de formação católica criada para crianças e adolescentes de <b className="text-brand">5 a 15 anos</b>, com atividades e ensinamentos que ajudam a construir uma fé mais consciente, sólida e fundamentada.
         </p>
@@ -249,12 +252,15 @@ function Index() {
       {/* BÔNUS */}
       <section className="mx-auto max-w-5xl px-5 py-28 text-center">
         <Eyebrow>E não para por aí... tem mais!</Eyebrow>
-        <h2 className="mt-3 text-4xl font-extrabold">Você também poderá receber <span className="text-brand">3 bônus exclusivos</span>!</h2>
-        <div className="mt-10 grid gap-5 text-left md:grid-cols-3">
+        <h2 className="mt-3 text-4xl font-extrabold">Você também poderá receber <span className="text-brand">6 bônus exclusivos</span>!</h2>
+        <div className="mt-10 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
           {[
             [bonus1, "Guia para Responder às Dúvidas sobre a Fé", "Um material para ajudar os pais a abordar perguntas difíceis sobre Deus, Jesus, a Igreja e os ensinamentos católicos, transformando dúvidas em oportunidades de aprendizado."],
             [bonus2, "Hábitos Familiares que Fortalecem a Fé", "Descubra maneiras práticas de inserir a oração, a leitura bíblica, a participação na Missa e os valores cristãos na rotina familiar."],
             [bonus3, "Fé Católica na Adolescência: dos 12 aos 18 Anos", "Um guia para acompanhar os filhos em uma fase de grandes transformações, ajudando-os a aprofundar seus conhecimentos religiosos e desenvolver uma fé consciente diante das novas influências e questionamentos."],
+            [bonus4, "Caça-Palavras da Fé Católica", "Uma atividade divertida para aprender sobre a Bíblia, os santos e os ensinamentos da Igreja."],
+            [bonus5, "Planner Minha Rotina de Fé", "Organize momentos de oração, leitura bíblica e atividades em família durante a semana."],
+            [bonus6, "Desafio dos 7 Dias de Fé em Família", "Sete pequenas atividades diárias para fortalecer a fé e aproximar a família de Deus."],
           ].map(([img, title, description], i) => (
             <div key={title} className="group flex h-full flex-col rounded-2xl border border-brand/10 bg-card p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="flex h-64 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-orange/5 via-white to-brand/5 p-3">
@@ -295,6 +301,9 @@ function Index() {
               ["Guia para Responder às Dúvidas da Fé", false],
               ["Hábitos Familiares que Fortalecem a Fé", false],
               ["Fé Católica na Adolescência: dos 12 aos 18 Anos", false],
+              ["Caça-Palavras da Fé Católica", false],
+              ["Planner Minha Rotina de Fé", false],
+              ["Desafio dos 7 Dias de Fé em Família", false],
             ]}
             de="R$99,97"
             preco="R$29,99"
@@ -305,7 +314,7 @@ function Index() {
           <Plan
             featured
             name="Plano Premium"
-            sub="Coleção completa + 3 bônus exclusivos"
+            sub="Coleção completa + 6 bônus exclusivos"
             img={planoPremium}
             items={[
               ["Coleção 'Caminhos da Fé' – 48 semanas", true],
@@ -394,7 +403,7 @@ function Plan({ name, sub, img, items, de, preco, parc, eco, cta, featured }: {
   return (
     <div className={`relative flex h-full flex-col rounded-3xl bg-card p-8 shadow-card ${featured ? "border-2 border-brand" : ""}`}>
       {featured && <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-orange px-4 py-1 text-xs font-bold uppercase text-primary-foreground">★ Mais vendido</span>}
-      {featured && <p className="mb-2 flex items-center gap-2 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground"><Star className="h-4 w-4 fill-orange text-orange" /> Coleção completa + 3 bônus exclusivos</p>}
+      {featured && <p className="mb-2 flex items-center gap-2 pt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground"><Star className="h-4 w-4 fill-orange text-orange" /> Coleção completa + 6 bônus exclusivos</p>}
       <h3 className="text-2xl font-bold">{name}</h3>
       <p className="mt-1 text-muted-foreground">{sub}</p>
       <img src={img} alt={name} className="my-8 h-56 w-full object-contain" />
