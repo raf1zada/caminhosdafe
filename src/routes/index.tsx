@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Lock, Mail, BookOpen, Tablet, Printer, CalendarDays, CircleCheck, MessageSquare,
   Brain, HeartHandshake, ShieldCheck, ChevronDown, Star, ChevronLeft, ChevronRight,
@@ -62,6 +62,14 @@ const faqs = [
 function Index() {
   const [open, setOpen] = useState<number | null>(null);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [remainingSeconds, setRemainingSeconds] = useState(15 * 60);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setRemainingSeconds((current) => Math.max(0, current - 1));
+    }, 1000);
+    return () => window.clearInterval(interval);
+  }, []);
   return (
     <>
       <link rel="preload" as="image" href={depoimento1} />
@@ -179,6 +187,7 @@ function Index() {
           <Eyebrow className="text-primary-foreground">Aproveite o preço promocional</Eyebrow>
           <h2 className="mb-4 mt-3 text-3xl font-extrabold">Uma condição especial para sua família!</h2>
           <p className="font-display text-5xl font-extrabold text-orange md:text-6xl">70% DE DESCONTO</p>
+          <CountdownTimer seconds={remainingSeconds} large className="mt-8" />
           <p className="mx-auto mt-8 max-w-xl leading-relaxed">
             Aqui, seus filhos não apenas aprendem conceitos religiosos: desenvolvem conhecimento para compreender os ensinamentos da Igreja, refletir sobre a própria fé e responder com segurança quando surgirem questionamentos.
           </p>
@@ -377,6 +386,7 @@ function Index() {
       <section className="bg-gradient-brand px-5 py-16 text-center text-primary-foreground">
         <Eyebrow className="text-primary-foreground">Não deixe essa oportunidade passar</Eyebrow>
         <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-extrabold">A fé que seu filho aprende hoje pode fazer parte de toda a sua vida.</h2>
+        <CountdownTimer seconds={remainingSeconds} className="mx-auto mt-8 max-w-md" />
         <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed">
           Não espere que as dúvidas apareçam para começar a conversar sobre a fé católica. Ofereça uma formação que estimule seu filho a compreender aquilo em que acredita.
         </p>
@@ -394,6 +404,30 @@ function Index() {
       </footer>
     </div>
     </>
+  );
+}
+
+
+function CountdownTimer({ seconds, large = false, className = "" }: { seconds: number; large?: boolean; className?: string }) {
+  const minutes = Math.floor(seconds / 60).toString().padStart(2, "0");
+  const remaining = (seconds % 60).toString().padStart(2, "0");
+  return (
+    <div className={`mx-auto flex w-full flex-col items-center ${className}`}>
+      <p className={`mb-3 font-extrabold uppercase tracking-[0.22em] text-primary-foreground ${large ? "text-sm md:text-base" : "text-xs"}`}>Oferta acaba em</p>
+      <div className={`flex items-center justify-center gap-2 ${large ? "gap-3 md:gap-4" : "gap-2"}`}>
+        <div className={`flex flex-col items-center justify-center rounded-2xl bg-orange font-display font-extrabold leading-none text-white shadow-lg shadow-black/10 ${large ? "h-24 w-24 text-5xl md:h-28 md:w-28 md:text-6xl" : "h-16 w-16 text-3xl md:h-[72px] md:w-[72px] md:text-4xl"}`}>
+          {minutes}
+        </div>
+        <span className={`font-extrabold text-primary-foreground/80 ${large ? "text-4xl md:text-5xl" : "text-2xl"}`}>:</span>
+        <div className={`flex flex-col items-center justify-center rounded-2xl bg-orange font-display font-extrabold leading-none text-white shadow-lg shadow-black/10 ${large ? "h-24 w-24 text-5xl md:h-28 md:w-28 md:text-6xl" : "h-16 w-16 text-3xl md:h-[72px] md:w-[72px] md:text-4xl"}`}>
+          {remaining}
+        </div>
+      </div>
+      <div className={`mt-2 flex justify-center font-bold uppercase tracking-[0.18em] text-primary-foreground/80 ${large ? "gap-16 text-xs md:gap-20 md:text-sm" : "gap-10 text-[10px]"}`}>
+        <span>Minutos</span>
+        <span>Segundos</span>
+      </div>
+    </div>
   );
 }
 
