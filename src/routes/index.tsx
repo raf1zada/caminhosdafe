@@ -309,12 +309,12 @@ function Index() {
             img={planoPremium}
             items={[
               ["Coleção 'Caminhos da Fé' – 48 semanas", true],
-              ["15 livros digitais de formação católica", true],
-              ["Conteúdos organizados para crianças e adolescentes de 5 a 15 anos", true],
-              ["Atividades de reflexão e aprendizado", true],
               ["Guia para Responder às Dúvidas da Fé", true],
               ["Hábitos Familiares que Fortalecem a Fé", true],
               ["Fé Católica na Adolescência: dos 12 aos 18 Anos", true],
+              ["Caça-Palavras da Fé Católica: Uma atividade divertida para aprender sobre a Bíblia, os santos e os ensinamentos da Igreja.", true],
+              ["Planner Minha Rotina de Fé: Organize momentos de oração, leitura bíblica e atividades em família durante a semana.", true],
+              ["Desafio dos 7 Dias de Fé em Família: Sete pequenas atividades diárias para fortalecer a fé e aproximar a família de Deus.", true],
             ]}
             de="R$166,33"
             preco="R$49,90"
