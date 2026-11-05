@@ -319,6 +319,7 @@ function Index() {
             parc="Ou em até 12x no cartão."
             eco="R$ 23,33 de economia — 70% OFF!"
             cta="Quero o Plano Básico"
+            href="https://pay.cakto.com.br/esh4hn2"
           />
           <Plan
             featured
@@ -339,6 +340,7 @@ function Index() {
             parc="Ou em até 12x no cartão."
             eco="R$ 53,43 de economia — 70% OFF!"
             cta="Quero o Plano Premium"
+            href="https://pay.cakto.com.br/3d8itck_1285856"
           />
         </div>
       </section>
@@ -431,8 +433,8 @@ function CountdownTimer({ seconds, large = false, className = "" }: { seconds: n
   );
 }
 
-function Plan({ name, sub, img, items, de, preco, parc, eco, cta, featured }: {
-  name: string; sub: string; img: string; items: [string, boolean][]; de: string; preco: string; parc: string; eco: string; cta: string; featured?: boolean;
+function Plan({ name, sub, img, items, de, preco, parc, eco, cta, href, featured }: {
+  name: string; sub: string; img: string; items: [string, boolean][]; de: string; preco: string; parc: string; eco: string; cta: string; href: string; featured?: boolean;
 }) {
   return (
     <div className={`relative flex h-full flex-col rounded-3xl bg-card p-8 shadow-card ${featured ? "border-2 border-brand" : ""}`}>
@@ -452,7 +454,7 @@ function Plan({ name, sub, img, items, de, preco, parc, eco, cta, featured }: {
         <p className="text-sm text-muted-foreground">{parc}</p>
         <span className="mt-2 inline-block rounded-full bg-cta/10 px-3 py-1 text-sm font-semibold">Você economiza {eco}</span>
       </div>
-      <Cta className="mt-8 w-full">{cta} →</Cta>
+      <a href={href} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-xl bg-cta px-8 py-5 text-center text-base font-extrabold uppercase text-primary-foreground shadow-cta transition-transform hover:scale-[1.02]">{cta} →</a>
     </div>
   );
 }
