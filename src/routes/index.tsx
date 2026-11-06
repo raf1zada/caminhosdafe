@@ -319,7 +319,7 @@ function Index() {
             parc="Ou em até 12x no cartão."
             eco="R$ 23,33 de economia — 70% OFF!"
             cta="Quero o Plano Básico"
-            href="https://pay.cakto.com.br/esh4hn2"
+            href="https://pay.cakto.com.br/hykqyc7_1288148"
           />
           <Plan
             featured
@@ -340,7 +340,7 @@ function Index() {
             parc="Ou em até 12x no cartão."
             eco="R$ 53,43 de economia — 70% OFF!"
             cta="Quero o Plano Premium"
-            href="https://pay.cakto.com.br/3d8itck_1285856"
+            href="https://pay.cakto.com.br/omgucps"
           />
         </div>
       </section>
