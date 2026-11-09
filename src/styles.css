@@ -166,3 +166,17 @@
 @utility shadow-cta { box-shadow: var(--shadow-cta); }
 @layer base {
 }
+
+
+/* Entrada suave das seções, respeitando preferência por movimento reduzido. */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 500ms ease, transform 500ms ease;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
