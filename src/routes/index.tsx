@@ -14,6 +14,7 @@ import bonus4 from "@/Caça-Palavras da Fé Católica.png";
 import bonus5 from "@/Planner Semanal de Fé em Família.png";
 import bonus6 from "@/Desafio dos 7 Dias de Fé em Família.png";
 import planoPremium from "@/bonus.jpg";
+import retratoAlessandro from "@/Retrato profissional sorridente em ambiente acolhedor.png";
 
 const checkout = {
   basico: "https://pay.cakto.com.br/hykqyc7_1288148",
@@ -114,11 +115,13 @@ function Index() {
       </div><button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>NÃO QUERO ESPERAR →</button><p className="mt-3 text-sm text-gray-500">Acesso imediato no seu WhatsApp e e-mail</p>
     </div></section>
 
-    <section className={dark}><div className={section + " mx-auto max-w-4xl"}>
+    <section className={dark}><div className={section + " mx-auto max-w-5xl"}>
+      <div className="grid items-center gap-8 md:grid-cols-[minmax(220px,0.8fr)_minmax(0,1.5fr)] md:gap-12">
+      <img src={retratoAlessandro} alt="Alessandro Freitas, catequista e criador do Caminhos da Fé" className="mx-auto w-full max-w-xs rounded-2xl object-cover shadow-2xl md:max-w-sm" loading="lazy"/>
       <div><h2 className="font-display text-3xl font-bold md:text-4xl">Por que eu, catequista, criei este material</h2>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-white/85">
         <p>Meu nome é Alessandro Freitas e sou catequista.</p><p>Eu amo a catequese. Mas aprendi uma coisa que me incomodou: ensinar uma criança a repetir não é o mesmo que ensinar uma criança a compreender.</p><p>Orações decoradas ajudam. Mas não bastam quando chegam as perguntas difíceis.</p><p>Foi por isso que criei o Caminhos da Fé: um caminho organizado, semana a semana, para o pai e a mãe conversarem com seus filhos sobre o que a Igreja ensina e por que ensina.</p><p>Eu não prometo que seu filho nunca vai duvidar. Dúvida faz parte de crescer. O que eu quero te entregar é a ferramenta para que, quando a dúvida chegar, ele encontre em casa uma resposta e uma conversa, e não o silêncio.</p><p>Fiz este material para que nenhum pai precise dizer: 'eu não soube o que responder'.</p>
-      </div><p className="mt-6 font-display text-xl italic text-[#C9A24B]">Alessandro Freitas — Catequista</p></div>
+      </div><p className="mt-6 font-display text-xl italic text-[#C9A24B]">Alessandro Freitas — Catequista</p></div></div>
     </div></section>
 
     <section className={cream}><div className={section + " text-center"}>
