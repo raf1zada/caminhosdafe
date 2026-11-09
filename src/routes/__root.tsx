@@ -78,14 +78,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Raízes da Fé" },
-      { name: "description", content: "Série católica de 52 semanas para crianças" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Raízes da Fé" },
-      { property: "og:description", content: "Série católica de 52 semanas para crianças" },
+      { title: "Caminhos da Fé — Formação católica para seus filhos" },
+      { name: "description", content: "48 semanas de formação católica em casa para crianças e adolescentes de 5 a 15 anos. Ensine seu filho a entender e explicar a fé." },
+      { property: "og:title", content: "Caminhos da Fé — Formação católica para seus filhos" },
+      { property: "og:description", content: "48 semanas de formação católica em casa para crianças e adolescentes de 5 a 15 anos. Ensine seu filho a entender e explicar a fé." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -93,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:wght@700;800&display=swap" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
@@ -105,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
         <script
