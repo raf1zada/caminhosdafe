@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BookOpen, Tablet, Printer, Check, AlertTriangle, ShieldCheck, ChevronDown, ChevronLeft, ChevronRight, MessageCircle, Mail } from "lucide-react";
-import heroKit from "@/Coleção Caminhos da Fé em Família.png";
+const heroKit = "/images/caminhos-da-fe-mockup.webp";
 import kitBasico from "@/Kit Caminhos da Fé em Família.png";
 import depoimento1 from "@/depoimento1.png";
 import depoimento2 from "@/depoimento2.png";
@@ -34,9 +34,9 @@ const bonuses = [
   [bonus1, "Guia para Responder às Dúvidas sobre a Fé", "Ajuda os pais a responder perguntas difíceis sobre Deus, Jesus, a Igreja e os ensinamentos católicos.", "R$ 47,00"],
   [bonus2, "Hábitos Familiares que Fortalecem a Fé", "Maneiras práticas de colocar oração, leitura bíblica e Missa na rotina da família.", "R$ 47,00"],
   [bonus3, "Fé Católica na Adolescência", "Um guia para acompanhar os filhos em uma fase de grandes mudanças e novos questionamentos.", "R$ 47,00"],
-  [bonus4, "Caça-Palavras da Fé Católica", "Atividade divertida para aprender sobre a Bíblia, os santos e a Igreja.", "R$ 10,00"],
-  [bonus5, "Planner Minha Rotina de Fé", "Organize oração, leitura bíblica e atividades em família durante a semana.", "R$ 10,00"],
-  [bonus6, "Desafio dos 7 Dias de Fé em Família", "Sete pequenas atividades diárias para aproximar a família de Deus.", "R$ 10,00"],
+  [bonus4, "Caça-Palavras da Fé Católica", "Uma atividade divertida para aprender sobre a Bíblia, os santos e os ensinamentos da Igreja.", "R$ 10,00"],
+  [bonus5, "Planner Minha Rotina de Fé", "Organize momentos de oração, leitura bíblica e atividades em família durante a semana.", "R$ 10,00"],
+  [bonus6, "Desafio dos 7 Dias de Fé em Família", "Sete pequenas atividades diárias para fortalecer a fé e aproximar a família de Deus.", "R$ 10,00"],
 ] as const;
 
 export const Route = createFileRoute("/")({
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/")({
     { property: "og:title", content: "Caminhos da Fé — Formação católica para seus filhos" },
     { property: "og:description", content: "48 semanas de formação católica em casa para crianças e adolescentes de 5 a 15 anos. Ensine seu filho a entender e explicar a fé." },
     { property: "og:type", content: "website" },
-    { property: "og:image", content: heroKit },
+    { property: "og:image", content: "/images/caminhos-da-fe-mockup.webp" },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),
   component: Index,
