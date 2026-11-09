@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { BookOpen, Tablet, Printer, Check, AlertTriangle, ShieldCheck, ChevronDown, ChevronLeft, ChevronRight, MessageCircle, Mail } from "lucide-react";
+import { BookOpen, Tablet, Printer, Check, AlertTriangle, ChevronDown, ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
 const heroKit = "/images/caminhos-da-fe-mockup.webp";
 import kitBasico from "@/Kit Caminhos da Fé em Família.png";
 import depoimento1 from "@/depoimento1.png";
@@ -77,14 +77,13 @@ function Index() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const checkoutUrl = (url: string) => url + window.location.search;
   const goPlans = () => document.getElementById("planos")?.scrollIntoView({ behavior: "smooth" });
   const testimonials = [depoimento1, depoimento2, depoimento3];
   const dark = "bg-[#0B1F3A] text-white";
   const cream = "bg-[#FAF6EE] text-[#0B1F3A]";
   const cta = "inline-flex min-h-[60px] w-full items-center justify-center rounded-xl bg-[#16A34A] px-6 py-4 text-center text-base font-extrabold uppercase text-white shadow-lg transition hover:brightness-110 active:scale-[.99] animate-[pulse_4s_ease-in-out_infinite]";
   const section = "mx-auto w-full max-w-6xl px-5 py-16 md:px-8 md:py-24";
-  return <main className="overflow-hidden bg-[#FAF6EE] font-sans text-[#0B1F3A]">
+  return <main className="overflow-hidden bg-[#FAF6EE] font-sans text-lg text-[#0B1F3A]">
     <div className="sticky top-0 z-40 bg-[#0B1F3A] px-3 py-2.5 text-center text-[10px] font-bold uppercase tracking-[.12em] text-[#C9A24B] sm:text-xs">PAIS CATÓLICOS: LEIAM ISTO ANTES QUE SEU FILHO CRESÇA SEM SABER POR QUE ACREDITA</div>
 
     <section className={dark}>
