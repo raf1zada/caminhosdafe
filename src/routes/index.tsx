@@ -171,7 +171,7 @@ function Index() {
           <p className="mx-auto mt-3 max-w-3xl text-base text-[#0B1F3A]/70 md:text-lg">Cada encontro foi pensado para ensinar, despertar a curiosidade e fortalecer a fé.</p>
           <div className="mt-7 flex items-center justify-between gap-3">
             <button type="button" aria-label="Encontros anteriores" onClick={() => setEncounterPage((v) => (v + 5) % 6)} className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-[#0B1F3A]/20 bg-white text-[#0B1F3A] shadow-sm transition hover:bg-[#0B1F3A] hover:text-white"><ChevronLeft/></button>
-            <div className="flex min-w-0 flex-1 snap-x snap-mandatory gap-4 overflow-x-auto text-left md:grid md:grid-cols-3 md:overflow-visible">
+            <div className="grid min-w-0 flex-1 gap-4 text-left md:grid-cols-3">
               {[
                 [Cross,"Deus nos ama","Descubra o amor de Deus e como Ele está presente em nossa vida."],
                 [BookOpen,"A Bíblia","Conheça a Palavra de Deus e sua importância para a fé."],
@@ -183,7 +183,7 @@ function Index() {
                 [Cross,"Deus nos ama","Descubra o amor de Deus e como Ele está presente em nossa vida."],
                 [BookOpen,"A Bíblia","Conheça a Palavra de Deus e sua importância para a fé."],
                 [Church,"A Eucaristia","Entenda por que a Eucaristia é o centro da vida cristã."]
-              ].slice(0, encounterPage + 3 - 6) : []).map(([Icon,title,desc]:any,i:number)=><article key={String(title)} className="min-w-[82%] snap-center overflow-hidden rounded-2xl border border-[#0B1F3A]/10 bg-white shadow-sm md:min-w-0">
+              ].slice(0, encounterPage + 3 - 6) : []).map(([Icon,title,desc]:any,i:number)=><article key={String(title)} className="min-w-0 overflow-hidden rounded-2xl border border-[#0B1F3A]/10 bg-white shadow-sm">
                 <div className="flex h-32 items-center justify-center bg-[#0B1F3A]/[0.04] sm:h-40"><Icon className="h-14 w-14 text-[#C9A24B]" strokeWidth={1.35}/></div>
                 <div className="p-4"><h4 className="font-display text-lg font-bold text-[#0B1F3A]">{title}</h4><p className="mt-2 text-sm leading-relaxed text-[#0B1F3A]/70">{desc}</p></div>
               </article>)}
