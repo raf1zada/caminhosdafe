@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BookOpen, Tablet, Printer, Check, AlertTriangle, ChevronDown, ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
-const heroKit = "/images/caminhos-da-fe-mockup.webp";
+import heroKit from "@/Coleção Caminhos da Fé em Família.png";
 import kitBasico from "@/Kit Caminhos da Fé em Família.png";
 import depoimento1 from "@/depoimento1.png";
 import depoimento2 from "@/depoimento2.png";
@@ -86,10 +86,10 @@ function Index() {
   return <main className="overflow-hidden bg-[#FAF6EE] font-sans text-lg text-[#0B1F3A]">
     <div className="sticky top-0 z-40 bg-[#0B1F3A] px-3 py-2.5 text-center text-[10px] font-bold uppercase tracking-[.12em] text-[#C9A24B] sm:text-xs">PAIS CATÓLICOS: LEIAM ISTO ANTES QUE SEU FILHO CRESÇA SEM SABER POR QUE ACREDITA</div>
 
-    <section className={dark}>
+    <section className="bg-white text-[#0B1F3A]">
       <div className={section + " text-center"}>
         <h1 className="mx-auto max-w-4xl font-display text-[34px] font-extrabold leading-[1.12] md:text-6xl">Um dia alguém vai perguntar ao seu filho: 'por que você acredita nisso?' Ele vai ter resposta?</h1>
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/85">Muitos pais só percebem que o filho não sabe explicar a própria fé quando ele já está questionando tudo. O Caminhos da Fé é uma formação de 48 semanas, feita para fazer em casa, que ensina crianças e adolescentes de 5 a 15 anos a entender, explicar e viver o que a Igreja ensina.</p>
+        <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[#0B1F3A]/80">Muitos pais só percebem que o filho não sabe explicar a própria fé quando ele já está questionando tudo. O Caminhos da Fé é uma formação de 48 semanas, feita para fazer em casa, que ensina crianças e adolescentes de 5 a 15 anos a entender, explicar e viver o que a Igreja ensina.</p>
         <button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO PREPARAR MEU FILHO AGORA →</button>
         <p className="mt-3 flex items-center justify-center gap-2 text-sm text-white/65"><MessageCircle size={16}/>Acesso imediato no seu WhatsApp e e-mail</p>
         <p className="mt-7 text-sm font-semibold text-[#C9A24B]">15 livros digitais • 48 semanas de formação • Material imprimível</p>
