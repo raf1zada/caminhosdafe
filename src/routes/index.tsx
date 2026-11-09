@@ -46,7 +46,7 @@ export const Route = createFileRoute("/")({
     { property: "og:title", content: "Caminhos da Fé — Formação católica para seus filhos" },
     { property: "og:description", content: "48 semanas de formação católica em casa para crianças e adolescentes de 5 a 15 anos. Ensine seu filho a entender e explicar a fé." },
     { property: "og:type", content: "website" },
-    { property: "og:image", content: "/og-caminhos-da-fe.webp" },
+    { property: "og:image", content: heroKit },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),
   component: Index,
