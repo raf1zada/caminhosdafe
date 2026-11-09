@@ -57,6 +57,21 @@ function Index() {
   const [testimonial, setTestimonial] = useState(0);
   const [showSticky, setShowSticky] = useState(false);
   useEffect(() => {
+    const elements = Array.from(document.querySelectorAll("main > section"));
+    if (!("IntersectionObserver" in window)) return;
+    elements.forEach((element) => element.classList.add("fade-in-section"));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+  useEffect(() => {
     const onScroll = () => setShowSticky(window.scrollY > 420);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -152,7 +167,7 @@ function Index() {
     <section id="planos" className={cream + " scroll-mt-16"}><div className={section}>
       <h2 className="text-center font-display text-3xl font-bold md:text-5xl">Escolha seu plano e comece hoje</h2><p className="mt-3 text-center">Preço promocional atual. Pagamento único, sem mensalidade.</p>
       <div className="mt-10 grid items-stretch gap-6 md:grid-cols-2">
-        <Plan name="Plano Premium" line="Coleção completa + 6 bônus" img={planoPremium} price="R$ 22,90" href={checkout.premium} featured items={["Coleção 'Caminhos da Fé' — 15 livros, 48 semanas",...bonuses.map((b,i)=>"Bônus "+(i+1)+": "+b[1])]} />
+        <Plan name="Plano Premium" line="Coleção completa + 6 bônus" img={planoPremium} price="R$ 22,90" href={checkout.premium} featured items={["Coleção 'Caminhos da Fé' — 15 livros, 48 semanas","Bônus 1: Guia para Responder às Dúvidas sobre a Fé","Bônus 2: Hábitos Familiares que Fortalecem a Fé","Bônus 3: Fé Católica na Adolescência","Bônus 4: Caça-Palavras da Fé Católica","Bônus 5: Planner Minha Rotina de Fé","Bônus 6: Desafio dos 7 Dias de Fé em Família"]} />
         <Plan name="Plano Básico" line="Coleção completa" img={kitBasico} price="R$ 10,00" href={checkout.basico} items={["Coleção 'Caminhos da Fé' — 15 livros, 48 semanas","Acesso pelo celular, tablet ou computador","Material imprimível"]}/>
       </div>
     </div></section>
