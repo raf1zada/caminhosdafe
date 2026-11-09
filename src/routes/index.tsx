@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { BookOpen, Tablet, Printer, Check, AlertTriangle, ChevronDown, ChevronLeft, ChevronRight, MessageCircle } from "lucide-react";
+import { BookOpen, Tablet, Printer, Check, AlertTriangle, ChevronDown, ChevronLeft, ChevronRight, MessageCircle, MessageSquare, Heart, Users } from "lucide-react";
 import heroKit from "@/Coleção Caminhos da Fé em Família.png";
 import kitBasico from "@/Kit Caminhos da Fé em Família.png";
 import depoimento1 from "@/depoimento1.png";
@@ -56,6 +56,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   const [faq, setFaq] = useState<number | null>(null);
   const [testimonial, setTestimonial] = useState(0);
+  const [encounterSlide, setEncounterSlide] = useState(0);
   const [showSticky, setShowSticky] = useState(false);
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll("main > section"));
@@ -138,13 +139,66 @@ function Index() {
       <h2 className="text-center font-display text-3xl font-bold md:text-5xl">Como o Caminhos da Fé transforma a fé do seu filho</h2><p className="mt-3 text-center text-white/75">Quatro passos. Uma semana de cada vez.</p>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {[["01","Conhecimento da fé","Seu filho aprende os fundamentos da fé católica com explicações simples e organizadas."],["02","Reflexão e diálogo","Perguntas e atividades fazem a criança pensar, participar e falar sobre o que acredita."],["03","Compreensão da doutrina","Ele entende as razões por trás do que a Igreja ensina, em vez de só repetir."],["04","Fé aplicada à vida","Os ensinamentos viram atitudes, escolhas e relações do dia a dia."]].map(([n,t,d])=><article className="rounded-2xl border border-white/10 bg-white/5 p-6"><p className="font-display text-3xl font-bold text-[#C9A24B]">{n}</p><h3 className="mt-3 text-xl font-bold">{t}</h3><p className="mt-2 leading-relaxed text-white/75">{d}</p></article>)}
-      </div><p className="mt-8 rounded-xl bg-[#C9A24B] p-6 font-semibold leading-relaxed text-[#0B1F3A]">Perguntas como 'por que ir à Missa?', 'como sei que Deus existe?' e 'por que confessar a um padre?' deixam de ser um problema e viram uma oportunidade de conversa.</p>
-    </div></section>
+      </div><p className="mt-8 rounded-xl bg-[#C9A24B] p-6 font-semibold leading-relaxed text-[#0B1F3A]">Perguntas como 'por que ir à Missa?', 'como sei que Deus existe?' e 'por que confessar a um padre?' deixam de ser um problema e viram uma oportunidade de convers    <section className={cream} aria-labelledby="encontros-title">
+      <div className={section + " text-center"}>
+        <h2 id="encontros-title" className="font-display text-3xl font-bold md:text-5xl">Veja como são os encontros</h2>
+        <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-[#0B1F3A]/75 md:text-lg">Uma jornada de fé, aprendizado e união para viver em família, uma semana de cada vez.</p>
 
-    <section className={cream}><div className={section + " text-center"}>
-      <h2 className="font-display text-3xl font-bold md:text-5xl">Veja como são os encontros</h2>
-      <div className="mx-auto mt-8 max-w-4xl"><div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3" aria-label="Páginas dos encontros; deslize para ver"><div className="min-w-full snap-center"><img src={licoes} alt="Páginas dos encontros do Caminhos da Fé" className="w-full rounded-2xl" loading="lazy"/></div></div><p className="mt-4">Cada semana tem leitura, perguntas e atividade para fazer junto com seu filho.</p></div>
-      <button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO ESSE MATERIAL PARA A MINHA FAMÍLIA →</button><p className="mt-3 text-sm text-gray-500">Acesso imediato no seu WhatsApp e e-mail</p>
+        <div className="mx-auto mt-9 flex min-h-[220px] max-w-5xl flex-col items-center justify-center rounded-3xl border border-[#C9A24B]/35 bg-white px-6 py-12 shadow-lg md:min-h-[360px]">
+          <Users className="h-12 w-12 text-[#C9A24B]" strokeWidth={1.5}/>
+          <p className="mt-4 font-display text-xl font-semibold text-[#0B1F3A]">Um espaço para a foto da família</p>
+          <p className="mt-2 max-w-lg text-sm text-[#0B1F3A]/60">A imagem principal será adicionada aqui quando você enviar o arquivo.</p>
+        </div>
+
+        <div className="mt-7 grid gap-4 text-left md:grid-cols-3">
+          <article className="rounded-2xl border border-[#C9A24B]/25 bg-white p-6 shadow-sm">
+            <BookOpen className="h-9 w-9 text-[#C9A24B]" strokeWidth={1.7}/>
+            <h3 className="mt-4 font-display text-2xl font-bold text-[#0B1F3A]">Aprenda</h3>
+            <p className="mt-2 text-base leading-relaxed text-[#0B1F3A]/75">Conheça os ensinamentos da Igreja Católica de maneira clara, didática e apropriada para cada idade.</p>
+          </article>
+          <article className="rounded-2xl border border-[#C9A24B]/25 bg-white p-6 shadow-sm">
+            <MessageSquare className="h-9 w-9 text-[#C9A24B]" strokeWidth={1.7}/>
+            <h3 className="mt-4 font-display text-2xl font-bold text-[#0B1F3A]">Reflita</h3>
+            <p className="mt-2 text-base leading-relaxed text-[#0B1F3A]/75">Responda perguntas, compreenda os motivos da sua fé e desenvolva suas próprias convicções.</p>
+          </article>
+          <article className="rounded-2xl border border-[#C9A24B]/25 bg-white p-6 shadow-sm">
+            <Heart className="h-9 w-9 text-[#C9A24B]" strokeWidth={1.7}/>
+            <h3 className="mt-4 font-display text-2xl font-bold text-[#0B1F3A]">Viva</h3>
+            <p className="mt-2 text-base leading-relaxed text-[#0B1F3A]/75">Transforme o aprendizado em atitudes, orações e momentos especiais de fé em família.</p>
+          </article>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="font-display text-2xl font-bold md:text-4xl">Conheça um pouco do que seu filho vai aprender</h3>
+          <p className="mx-auto mt-3 max-w-3xl text-base text-[#0B1F3A]/70 md:text-lg">Cada encontro foi pensado para ensinar, despertar a curiosidade e fortalecer a fé.</p>
+          <div className="mx-auto mt-7 max-w-5xl rounded-2xl border border-[#C9A24B]/25 bg-white p-5 shadow-sm md:p-7">
+            <div className="flex items-center justify-between gap-3">
+              <button type="button" aria-label="Prévia anterior" onClick={() => setEncounterSlide((v) => (v + 2) % 3)} className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[#C9A24B]/50 text-[#0B1F3A] transition hover:bg-[#FAF6EE]"><ChevronLeft/></button>
+              <div className="flex min-h-[190px] flex-1 flex-col items-center justify-center rounded-xl bg-[#FAF6EE] px-4 py-8 md:min-h-[250px]">
+                <BookOpen className="h-10 w-10 text-[#C9A24B]" strokeWidth={1.5}/>
+                <p className="mt-3 font-display text-xl font-semibold text-[#0B1F3A]">Prévia do encontro {encounterSlide + 1}</p>
+                <p className="mt-2 max-w-lg text-sm leading-relaxed text-[#0B1F3A]/60">A imagem e a descrição deste encontro serão inseridas aqui com os materiais reais.</p>
+              </div>
+              <button type="button" aria-label="Próxima prévia" onClick={() => setEncounterSlide((v) => (v + 1) % 3)} className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[#C9A24B]/50 text-[#0B1F3A] transition hover:bg-[#FAF6EE]"><ChevronRight/></button>
+            </div>
+            <div className="mt-5 flex justify-center gap-2" aria-label={`Prévia ${encounterSlide + 1} de 3`}>
+              {[0,1,2].map((n) => <button key={n} type="button" aria-label={`Ir para prévia ${n + 1}`} aria-current={encounterSlide === n ? "true" : undefined} onClick={() => setEncounterSlide(n)} className={`h-2.5 rounded-full transition-all ${encounterSlide === n ? "w-7 bg-[#C9A24B]" : "w-2.5 bg-[#0B1F3A]/20"}`}/>)}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col items-center gap-4 rounded-2xl border border-[#C9A24B] bg-[#0B1F3A] px-6 py-8 text-white shadow-lg md:flex-row md:justify-center md:gap-8 md:px-10 md:py-9">
+          <span className="font-display text-7xl font-bold leading-none text-[#C9A24B] md:text-8xl">48</span>
+          <div className="text-center md:border-l md:border-[#C9A24B]/60 md:pl-8 md:text-left">
+            <h3 className="font-display text-2xl font-bold text-[#C9A24B] md:text-3xl">Uma semana de cada vez.</h3>
+            <p className="mt-2 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">São 48 semanas de formação católica para ajudar seus filhos a conhecer, compreender e fortalecer sua fé.</p>
+          </div>
+        </div>
+        <p className="mx-auto mt-12 max-w-4xl font-display text-2xl font-bold leading-snug md:text-3xl">Mais do que ensinar orações, queremos ajudar seu filho a <span className="text-[#C9A24B]">compreender por que acredita.</span></p>
+        <button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO ESSE MATERIAL PARA A MINHA FAMÍLIA →</button>
+        <p className="mt-3 text-sm text-gray-500">Acesso imediato no seu WhatsApp e e-mail</p>
+      </div>
+    </section>mail</p>
     </div></section>
 
     <section className={dark}><div className={section}>
