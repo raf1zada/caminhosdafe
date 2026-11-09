@@ -97,11 +97,10 @@ function Index() {
       <h2 className="font-display text-3xl font-bold md:text-5xl">Fé que ninguém explicou é fé que a primeira dúvida derruba.</h2>
       <div className="mt-7 max-w-4xl space-y-4 text-lg leading-relaxed">
         <p>Entre a infância e a adolescência, seu filho vai decidir em quem confiar e no que acreditar.</p><p>Se ele não encontrar razões para a fé dentro de casa, vai encontrar razões para a dúvida fora dela.</p><p>Na escola. Na internet. Nos amigos. Todo mundo vai explicar a ele em que acreditar. A pergunta é: quem vai explicar a fé?</p><p>Cada semana que passa sem essa conversa é uma semana perdida.</p>
-      </div><button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>NÃO QUERO ESPERAR →</button>
+      </div><button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>NÃO QUERO ESPERAR →</button><p className="mt-3 text-sm text-gray-500">Acesso imediato no seu WhatsApp e e-mail</p>
     </div></section>
 
-    <section className={dark}><div className={section + " grid items-center gap-10 md:grid-cols-[.8fr_1.2fr]"}>
-      <div className="hidden rounded-2xl bg-white/5 p-8 text-center md:block"><BookOpen className="mx-auto h-16 w-16 text-[#C9A24B]"/></div>
+    <section className={dark}><div className={section + " mx-auto max-w-4xl"}>
       <div><h2 className="font-display text-3xl font-bold md:text-4xl">Por que eu, catequista, criei este material</h2>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-white/85">
         <p>Meu nome é Alessandro Freitas e sou catequista.</p><p>Eu amo a catequese. Mas aprendi uma coisa que me incomodou: ensinar uma criança a repetir não é o mesmo que ensinar uma criança a compreender.</p><p>Orações decoradas ajudam. Mas não bastam quando chegam as perguntas difíceis.</p><p>Foi por isso que criei o Caminhos da Fé: um caminho organizado, semana a semana, para o pai e a mãe conversarem com seus filhos sobre o que a Igreja ensina e por que ensina.</p><p>Eu não prometo que seu filho nunca vai duvidar. Dúvida faz parte de crescer. O que eu quero te entregar é a ferramenta para que, quando a dúvida chegar, ele encontre em casa uma resposta e uma conversa, e não o silêncio.</p><p>Fiz este material para que nenhum pai precise dizer: 'eu não soube o que responder'.</p>
@@ -115,7 +114,7 @@ function Index() {
       <img src={heroKit} alt="Mockup da coleção Caminhos da Fé" className="mx-auto mt-8 w-full max-w-4xl"/>
       <div className="mt-8 grid gap-4 text-left md:grid-cols-3">
         {[[BookOpen,"15 livros digitais","Uma jornada organizada de 48 semanas."],[Tablet,"Pelo celular, tablet ou computador","Acesse onde quiser."],[Printer,"Imprimível","Imprima os materiais se sua família preferir."]].map(([Icon,title,desc]:any)=><article className="rounded-2xl border border-[#C9A24B]/30 bg-white p-6"><Icon className="h-8 w-8 text-[#C9A24B]"/><h3 className="mt-4 font-bold">{title}</h3><p className="mt-2">{desc}</p></article>)}
-      </div><button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO COMEÇAR AGORA →</button>
+      </div><button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO COMEÇAR AGORA →</button><p className="mt-3 text-sm text-gray-500">Acesso imediato no seu WhatsApp e e-mail</p>
     </div></section>
 
     <section className={dark}><div className={section}>
@@ -127,8 +126,8 @@ function Index() {
 
     <section className={cream}><div className={section + " text-center"}>
       <h2 className="font-display text-3xl font-bold md:text-5xl">Veja como são os encontros</h2>
-      <div className="mx-auto mt-8 max-w-4xl"><img src={licoes} alt="Páginas dos encontros do Caminhos da Fé" className="w-full rounded-2xl"/><p className="mt-4">Cada semana tem leitura, perguntas e atividade para fazer junto com seu filho.</p></div>
-      <button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO ESSE MATERIAL PARA A MINHA FAMÍLIA →</button>
+      <div className="mx-auto mt-8 max-w-4xl"><div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3" aria-label="Páginas dos encontros; deslize para ver"><div className="min-w-full snap-center"><img src={licoes} alt="Páginas dos encontros do Caminhos da Fé" className="w-full rounded-2xl" loading="lazy"/></div></div><p className="mt-4">Cada semana tem leitura, perguntas e atividade para fazer junto com seu filho.</p></div>
+      <button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO ESSE MATERIAL PARA A MINHA FAMÍLIA →</button><p className="mt-3 text-sm text-gray-500">Acesso imediato no seu WhatsApp e e-mail</p>
     </div></section>
 
     <section className={dark}><div className={section}>
@@ -162,7 +161,7 @@ function Index() {
       <p className="inline-block rounded-full border border-[#C9A24B] px-6 py-3 font-bold tracking-widest text-[#C9A24B]">30 DIAS DE GARANTIA</p>
       <h2 className="mt-5 font-display text-3xl font-bold md:text-5xl">Risco zero para você</h2>
       <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-white/80">Você tem 30 dias para conhecer o material com sua família. Se por qualquer motivo perceber que ele não é para vocês, basta pedir e devolvemos 100% do valor. Sem burocracia.</p>
-      <button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO COMEÇAR SEM RISCO →</button>
+      <button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO COMEÇAR SEM RISCO →</button><p className="mt-3 text-sm text-white/70">Acesso imediato no seu WhatsApp e e-mail</p>
     </div></section>
 
     {testimonials.length > 0 && <section className={cream}><div className={section + " text-center"}>
@@ -195,7 +194,7 @@ function Plan({name,line,img,price,href,items,featured=false}:{name:string;line:
     <ul className="flex-1 space-y-3">{items.map(t=><li key={t} className="flex gap-2 text-sm leading-relaxed"><Check className="h-5 w-5 shrink-0 text-[#16A34A]"/>{t}</li>)}</ul>
     <p className="mt-8 font-display text-5xl font-extrabold">{price}</p>
     {featured&&<p className="mt-2 text-sm">Menos que um lanche em família, para a formação de fé do seu filho por 48 semanas.</p>}
-    <a href={url} target="_blank" rel="noopener noreferrer" className={"mt-6 inline-flex min-h-[60px] w-full items-center justify-center rounded-xl px-5 py-4 text-center font-extrabold uppercase "+(featured?"bg-[#16A34A] text-white shadow-lg":"border-2 border-[#16A34A] text-[#16A34A]")}>QUERO O {name.toUpperCase()} →</a>
+    <a href={url} target="_blank" rel="noopener noreferrer" className={"mt-6 inline-flex min-h-[60px] w-full items-center justify-center rounded-xl px-5 py-4 text-center font-extrabold uppercase "+(featured?"bg-[#16A34A] text-white shadow-lg":"border-2 border-[#16A34A] text-[#16A34A]")}>{featured?"QUERO O PLANO PREMIUM →":"QUERO O PLANO BÁSICO →"}</a>
     <p className="mt-3 flex items-center justify-center gap-2 text-center text-xs text-gray-500"><MessageCircle size={14}/>Acesso imediato no seu WhatsApp e e-mail</p>
   </article>;
 }
