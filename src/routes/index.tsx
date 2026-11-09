@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { BookOpen, Tablet, Printer, Check, AlertTriangle, ChevronDown, ChevronLeft, ChevronRight, MessageCircle, MessageSquare, Heart, Users } from "lucide-react";
+import { BookOpen, Tablet, Printer, Check, AlertTriangle, ChevronDown, ChevronLeft, ChevronRight, MessageCircle, MessageSquare, Heart, Users, Cross, Church, HandHeart, Sparkles } from "lucide-react";
 import heroKit from "@/Coleção Caminhos da Fé em Família.png";
 import kitBasico from "@/Kit Caminhos da Fé em Família.png";
 import depoimento1 from "@/depoimento1.png";
@@ -139,7 +139,10 @@ function Index() {
       <h2 className="text-center font-display text-3xl font-bold md:text-5xl">Como o Caminhos da Fé transforma a fé do seu filho</h2><p className="mt-3 text-center text-white/75">Quatro passos. Uma semana de cada vez.</p>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {[["01","Conhecimento da fé","Seu filho aprende os fundamentos da fé católica com explicações simples e organizadas."],["02","Reflexão e diálogo","Perguntas e atividades fazem a criança pensar, participar e falar sobre o que acredita."],["03","Compreensão da doutrina","Ele entende as razões por trás do que a Igreja ensina, em vez de só repetir."],["04","Fé aplicada à vida","Os ensinamentos viram atitudes, escolhas e relações do dia a dia."]].map(([n,t,d])=><article className="rounded-2xl border border-white/10 bg-white/5 p-6"><p className="font-display text-3xl font-bold text-[#C9A24B]">{n}</p><h3 className="mt-3 text-xl font-bold">{t}</h3><p className="mt-2 leading-relaxed text-white/75">{d}</p></article>)}
-      </div><p className="mt-8 rounded-xl bg-[#C9A24B] p-6 font-semibold leading-relaxed text-[#0B1F3A]">Perguntas como 'por que ir à Missa?', 'como sei que Deus existe?' e 'por que confessar a um padre?' deix    <section className={cream}>
+      </div><p className="mt-8 rounded-xl bg-[#C9A24B] p-6 font-semibold leading-relaxed text-[#0B1F3A]">Perguntas como 'por que ir à Missa?', 'como sei que Deus existe?' e 'por que confessar a um padre?' deixam de ser um problema e viram uma oportunidade de conversa.</p>
+    </div></section>
+
+    <section className={cream}>
       <div className={section + " text-center"}>
         <h2 className="font-display text-3xl font-bold md:text-5xl">Veja como são os encontros</h2>
         <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-[#0B1F3A]/75 md:text-lg">Uma jornada de fé, aprendizado e união para viver em família, uma semana de cada vez.</p>
@@ -204,8 +207,7 @@ function Index() {
         <button onClick={goPlans} className={cta + " mt-8 max-w-xl"}>QUERO ESSE MATERIAL PARA A MINHA FAMÍLIA →</button>
         <p className="mt-3 text-sm text-gray-500">Acesso imediato no seu WhatsApp e e-mail</p>
       </div>
-    </section>mediato no seu WhatsApp e e-mail</p>
-    </div></section>
+    </section>
 
     <section className={dark}><div className={section}>
       <h2 className="font-display text-center text-3xl font-bold md:text-5xl">Um só material, para toda a sua família</h2>
