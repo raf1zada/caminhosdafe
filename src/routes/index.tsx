@@ -152,9 +152,9 @@ function Index() {
         <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-[#0B1F3A]/75 md:text-lg">Uma jornada de fé, aprendizado e união para viver em família, uma semana de cada vez.</p>
 
         <div className="mx-auto mt-8 max-w-5xl">
-          <div className="relative overflow-hidden rounded-2xl shadow-lg">
+          <div className="relative overflow-hidden rounded-2xl bg-white p-2 shadow-lg sm:p-3">
             {[encontroFamilia, encontroDepoimento, encontroTestemunho].map((src, index) => (
-              <img key={src} src={src} alt={["Família compartilhando a fé","Família em um momento sobre o Caminhos da Fé","Testemunho de fé em família"][index]} className={`h-56 w-full object-cover transition-opacity duration-300 sm:h-72 md:h-[390px] ${familySlide === index ? "block opacity-100" : "hidden opacity-0"}`} loading={index === 0 ? "eager" : "lazy"}/>
+              <img key={src} src={src} alt={["Família compartilhando a fé","Família em um momento sobre o Caminhos da Fé","Testemunho de fé em família"][index]} className={`mx-auto block h-auto max-h-[min(75vh,650px)] w-full object-contain transition-opacity duration-300 ${familySlide === index ? "opacity-100" : "hidden opacity-0"}`} loading={index === 0 ? "eager" : "lazy"}/>
             ))}
             <button type="button" aria-label="Imagem anterior" onClick={() => setFamilySlide((v) => (v + 2) % 3)} className="absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-[#0B1F3A] shadow-md transition hover:bg-white"><ChevronLeft/></button>
             <button type="button" aria-label="Próxima imagem" onClick={() => setFamilySlide((v) => (v + 1) % 3)} className="absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-[#0B1F3A] shadow-md transition hover:bg-white"><ChevronRight/></button>
