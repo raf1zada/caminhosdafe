@@ -15,6 +15,9 @@ import bonus5 from "@/Planner Semanal de Fé em Família.png";
 import bonus6 from "@/Desafio dos 7 Dias de Fé em Família.png";
 import planoPremium from "@/bonus.jpg";
 import retratoAlessandro from "@/Retrato profissional sorridente em ambiente acolhedor.png";
+import encontroFamilia from "@/Família Compartilhando a Fé.png";
+import encontroDepoimento from "@/Depoimento familiar sobre Caminhos da Fé.png";
+import encontroTestemunho from "@/Testemunho de Fé em Família.png";
 
 const checkout = {
   basico: "https://pay.cakto.com.br/hykqyc7_1288148",
@@ -57,6 +60,7 @@ function Index() {
   const [faq, setFaq] = useState<number | null>(null);
   const [testimonial, setTestimonial] = useState(0);
   const [encounterPage, setEncounterPage] = useState(0);
+  const [familySlide, setFamilySlide] = useState(0);
   const [showSticky, setShowSticky] = useState(false);
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll("main > section"));
@@ -147,8 +151,17 @@ function Index() {
         <h2 className="font-display text-3xl font-bold md:text-5xl">Veja como são os encontros</h2>
         <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-[#0B1F3A]/75 md:text-lg">Uma jornada de fé, aprendizado e união para viver em família, uma semana de cada vez.</p>
 
-        <div className="mx-auto mt-8 max-w-5xl overflow-hidden rounded-2xl shadow-lg">
-          <img src="https://ixymyhazbhztpjnlxmbd.supabase.co/storage/v1/object/images/generated/familia-lezendo-biblia-junto-347.webp" alt="Família reunida à mesa, lendo a Bíblia e aprendendo em conjunto" className="h-56 w-full object-cover sm:h-72 md:h-[390px]" loading="lazy"/>
+        <div className="mx-auto mt-8 max-w-5xl">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg">
+            {[encontroFamilia, encontroDepoimento, encontroTestemunho].map((src, index) => (
+              <img key={src} src={src} alt={["Família compartilhando a fé","Família em um momento sobre o Caminhos da Fé","Testemunho de fé em família"][index]} className={`h-56 w-full object-cover transition-opacity duration-300 sm:h-72 md:h-[390px] ${familySlide === index ? "block opacity-100" : "hidden opacity-0"}`} loading={index === 0 ? "eager" : "lazy"}/>
+            ))}
+            <button type="button" aria-label="Imagem anterior" onClick={() => setFamilySlide((v) => (v + 2) % 3)} className="absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-[#0B1F3A] shadow-md transition hover:bg-white"><ChevronLeft/></button>
+            <button type="button" aria-label="Próxima imagem" onClick={() => setFamilySlide((v) => (v + 1) % 3)} className="absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-[#0B1F3A] shadow-md transition hover:bg-white"><ChevronRight/></button>
+          </div>
+          <div className="mt-4 flex justify-center gap-2">
+            {[0,1,2].map((n) => <button key={n} type="button" aria-label={`Ver imagem ${n + 1}`} aria-current={familySlide === n ? "true" : undefined} onClick={() => setFamilySlide(n)} className={`h-2.5 rounded-full transition-all ${familySlide === n ? "w-7 bg-[#C9A24B]" : "w-2.5 bg-[#0B1F3A]/20"}`}/>)}
+          </div>
         </div>
 
         <div className="mt-7 grid gap-4 text-left md:grid-cols-3">
